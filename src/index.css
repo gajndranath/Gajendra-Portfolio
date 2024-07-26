@@ -1,0 +1,287 @@
+/* D:\CodeByte\portfolio\gajendra\src\index.css */
+/* Import the custom font */
+@import './assets/fonts/WEB/css/chillax.css';
+@import './assets/fonts/Grotesk/font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply Chillax font to all h1 to h6 elements */
+
+body {
+    font-family: 'Grotek', sans-serif;
+    color: #ffffff;
+    font-size: 0.8rem;
+    background-color: black;
+    text-transform: uppercase
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-chillax;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: black;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, transparent);
+
+}
+
+
+
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.blocks {
+    display: flex;
+    gap: 10px;
+}
+
+.block {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-transition-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(255, 255, 255);
+    z-index: 9999;
+    /* Ensure it covers the whole page */
+    transition: height 1s cubic-bezier(0.8, 0.2, 0.2, 0.8), background-color 1s cubic-bezier(0.8, 0.2, 0.2, 0.8);
+}
+
+/* hero */
+
+/* .sub-nav p:nth-child(1) {
+    width: 30%;
+} */
+
+.hero-section {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+.hero-section footer>div {
+    flex: 1;
+}
+
+.hero-section footer .slide-info {
+    flex: 2;
+}
+
+.hero-section footer .slide-info>div {
+    flex: 1;
+}
+
+.hero-section footer .slide-info>div:last-child {
+    flex: 2;
+}
+
+.hero-section footer .slide-name>p {
+    padding: 0.5em 0 1.5em 0;
+    font-size: 1.6rem;
+
+}
+
+
+.year p:nth-child(1),
+.agency p:nth-child(1),
+.experience p:nth-child(1),
+.certificate p:nth-child(1) {
+    margin-bottom: 1em;
+}
+
+
+/* .mask {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: url(./assets/gajendra.png);
+    background-size: cover;
+} */
+
+
+
+/* .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/gajendra.png);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+} */
+
+.hero-section {
+    position: relative;
+}
+
+.hero {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transform: scale(1);
+}
+
+.hero-image {
+    position: relative;
+    height: 240px;
+    width: 400px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    /* Ensure the hero image is above the glow */
+}
+
+.myimg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hero-image:hover {
+    transform: scale(1.1);
+}
+
+.uncover {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mask {
+    height: 100%;
+    flex-grow: 1;
+    background: linear-gradient(to right, #a5b4fc, #9755f4);
+}
+
+
+
+.lottie-animation {
+    position: relative;
+    z-index: 10;
+    /* Ensure it's on top */
+}
+
+
+/* menu bar */
+.menu {
+    transform: translate(-50%, -50%);
+    text-transform: none;
+}
+
+/* Menu initial hidden state */
+
+.row {
+    position: relative;
+    display: flex;
+}
+
+.row-1 {
+    left: -100%;
+    padding-right: 0.5em;
+    justify-content: flex-end;
+
+}
+
+.row-2 {
+    left: 110%;
+    justify-content: flex-end;
+    padding-right: 4em;
+    padding-block: 0.2em;
+}
+
+.row-3 {
+    left: -110%;
+    padding-left: 0;
+    padding-block: 0.2em;
+}
+
+.row-4 {
+    left: 110%;
+    justify-content: space-around;
+    padding-left: 1em;
+    padding-block: 0.2em;
+}
+
+.row-5 {
+    left: -110%;
+    justify-content: space-between;
+    padding-block: 0.2em;
+}
+
+.toggle {
+    position: relative;
+    background: none;
+    outline: none;
+    border: 1px solid #9755f4;
+    border-radius: 0.25em;
+    color: white;
+    padding: 0.25em 0.74em;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #a5b4fc, #9755f4);
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.toggle:hover {
+    color: white;
+}
+
+.toggle:hover:after {
+    width: 100%;
+}

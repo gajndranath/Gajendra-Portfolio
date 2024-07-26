@@ -1,0 +1,37 @@
+/**
+* @license
+*
+* Font Family: Chillax
+* Designed by: Manushi Parikh
+* URL: https://www.fontshare.com/fonts/chillax
+* © 2024 Indian Type Foundry
+*
+* Chillax Extralight 
+* Chillax Light 
+* Chillax Regular 
+* Chillax Medium 
+* Chillax Semibold 
+* Chillax Bold 
+* Chillax Variable (Variable font)
+
+*
+*/
+/* @font-face {
+  font-family: 'Chillax';
+  src: url('../fonts/Chillax-Regular.woff2') format('woff2'),
+    url('../fonts/Chillax-Regular.woff') format('woff'),
+    url('../fonts/Chillax-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('../fonts/Chillax-Medium.woff2') format('woff2'),
+    url('../fonts/Chillax-Medium.woff') format('woff'),
+    url('../fonts/Chillax-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
