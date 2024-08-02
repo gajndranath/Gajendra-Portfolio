@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node sitemap.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -13,15 +13,20 @@
     "@radix-ui/react-hover-card": "^1.1.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.17",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.0",
     "gsap": "^3.12.5",
+    "jsdom": "^24.1.1",
     "lottie-web": "^5.12.2",
     "mini-svg-data-uri": "^1.4.4",
+    "path": "^0.12.7",
     "prop-types": "^15.8.1",
     "qss": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.25.1",
+    "sitemap": "^8.0.0",
     "tailwind-merge": "^2.4.0",
     "three": "^0.166.1"
   },
@@ -37,6 +42,6 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "vite": "^5.3.4",
-    "vite-plugin-imagemin": "^0.6.1"
+    "vite-plugin-imagemin": "^0.5.3"
   }
 }
